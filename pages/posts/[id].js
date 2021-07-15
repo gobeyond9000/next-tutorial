@@ -10,7 +10,8 @@ function PostId({ data }) {
   return (
     <div>
       <h1>{data.title}</h1>
-      <p>{data.body}</p>
+          <p>{data.body}</p>
+          <img src={"/images/back.jpg"} alt="back" />
     </div>
   );
 }
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ query, params }) {
   const { id } = query || params;
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  const res = await fetch(`${process.env.API_BASE_URL}/posts/${id}`);
   const data = await res.json();
   return {
     props: {
