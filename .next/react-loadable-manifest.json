@@ -4,5 +4,11 @@
     "files": [
       "static/chunks/node_modules_next_dist_client_dev_noop_js.js"
     ]
+  },
+  "posts\\index.js -> ../../components/PostHeader": {
+    "id": "./components/PostHeader.js",
+    "files": [
+      "static/chunks/components_PostHeader_js.js"
+    ]
   }
 }
